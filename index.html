@@ -1,0 +1,37 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <div class="calculator-container">
+      <div class="calculator-display"> 
+      <div class="calculation" id="calculation"></div>
+      <div class="current-input" id="cal-input"></div>
+      </div>
+      <div class="calculator-button">
+      <button id="ac" style="background-color: crimson; color: white;">AC</button>
+      <button id="plus" onclick="appendOperation('+')">+</button> 
+      <button id="minus" onclick="appendOperation('-')">-</button> 
+      <button id="multiply" onclick="appendOperation('*')">x</button> 
+      <button id="seven" onclick="appendNumber('7')">7</button> 
+      <button id="eight" onclick="appendNumber('8')">8</button> 
+      <button id="nine" onclick="appendNumber('9')">9</button> 
+      <button id="divide" onclick="appendOperation('/')">/</button> 
+      <button id="four" onclick="appendNumber('4')">4</button> 
+      <button id="five" onclick="appendNumber('5')">5</button> 
+      <button id="six" onclick="appendNumber('6')">6</button> 
+      <button id="delete" style="background-color: #f0c807;">Del</button> 
+      <button id="one" onclick="appendNumber('1')">1</button> 
+      <button id="two" onclick="appendNumber('2')">2</button> 
+      <button id="three" onclick="appendNumber('3')">3</button>
+      <button id="equal" style="background-color: #1656ad; color: white;">=</button> 
+      <button id="dot" onclick="appendNumber('.')">.</button>
+      <button id="zero" onclick="appendNumber('0')">0</button>
+      </div> 
+    </div>
+    <script src="script.js"></script>
+    </body>
+</html>
