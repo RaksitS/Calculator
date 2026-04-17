@@ -79,7 +79,7 @@ function updateDisplay() {
 };
 
 
-allClear.addEventListener("click", () => {
+allClear.addEventListener("click", () => { 
     currentOperand = "";
     previousOperand = "";
     operation = "";
@@ -100,5 +100,23 @@ deleteByOne.addEventListener("click", () => {
 });
 
 window.addEventListener('keydown', (e) => {
-    console.log(e.key);
-})
+    if (e.key >= '0' && e.key <= '9' || e.key === '.') {
+        appendNumber(e.key);
+    }
+    
+    if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') {
+        appendOperation(e.key);
+    }
+
+    if (e.key === 'Enter' || e.key === '=') {
+        equal.click(); 
+    }
+
+    if (e.key === 'Backspace') {
+        deleteByOne.click(); 
+    }
+    
+    if (e.key === 'Escape') {
+        allClear.click();
+    }
+});
